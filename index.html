@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Carles Meca — Front-End Developer & UI/UX Designer based in Barcelona, Spain." />
+  <title>Carles Meca — Front-End & UI/UX</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-star">✦</span>
+        <span>CM</span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn--nav" id="hireMeBtn">Hire Me →</a>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
+      <ul>
+        <li><a href="#about" class="nav__mobile-link">About</a></li>
+        <li><a href="#skills" class="nav__mobile-link">Skills</a></li>
+        <li><a href="#projects" class="nav__mobile-link">Projects</a></li>
+        <li><a href="#contact" class="nav__mobile-link">Contact</a></li>
+        <li><a href="#contact" class="nav__mobile-link nav__mobile-cta">Hire Me →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <!-- Blob decorations -->
+    <div class="blob blob--yellow" aria-hidden="true"></div>
+    <div class="blob blob--purple" aria-hidden="true"></div>
+    <div class="blob blob--bottom" aria-hidden="true"></div>
+
+    <!-- Decorative SVG lines (bezier curves like in the reference) -->
+    <svg class="hero__deco-lines" viewBox="0 0 1400 700" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+      <path d="M 0 350 Q 300 80, 700 320 T 1400 180" stroke="#C8A0DC" stroke-width="1" fill="none" opacity="0.35"/>
+      <path d="M -50 500 Q 350 250, 800 400 T 1450 300" stroke="#7C5CBF" stroke-width="0.7" fill="none" opacity="0.2"/>
+      <path d="M 100 600 Q 500 380, 1000 480 T 1400 400" stroke="#E8B84B" stroke-width="0.8" fill="none" opacity="0.18"/>
+    </svg>
+
+    <div class="hero__container">
+      <!-- Text content -->
+      <div class="hero__content">
+        <p class="hero__eyebrow">
+          <span class="hero__status-dot"></span>
+          Available for work &nbsp;·&nbsp; Barcelona, Spain
+        </p>
+
+        <h1 class="hero__title">
+          <span class="hero__sparkle" aria-hidden="true">✦</span>CARLES<br>
+          <span class="hero__name-line">MECA</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          FRONT-END &amp; UI/UX Design<span class="hero__sparkle hero__sparkle--sm" aria-hidden="true">✦</span>
+        </p>
+
+        <p class="hero__bio">
+          Web Developer &amp; Programmer passionate about crafting beautiful,
+          functional digital experiences — from pixel-perfect interfaces to
+          full-stack applications.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="https://github.com/CPC2-2" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Visual / avatar -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__avatar-wrap">
+          <div class="hero__ring"></div>
+          <div class="hero__avatar"><img src="fotomia.jpg" alt="Carles Meca, a young man with dark wavy hair wearing a black button-up shirt, sitting on a brown leather couch against a textured white wall."></div>
+          <div class="hero__orbit">
+            <div class="hero__orbit-dot" style="--a:0deg"></div>
+            <div class="hero__orbit-dot" style="--a:120deg"></div>
+            <div class="hero__orbit-dot" style="--a:240deg"></div>
+          </div>
+        </div>
+
+        <div class="hero__stat hero__stat--1">
+          <span class="hero__stat-num">9+</span>
+          <span class="hero__stat-label">Projects</span>
+        </div>
+        <div class="hero__stat hero__stat--2">
+          <span class="hero__stat-num">2+</span>
+          <span class="hero__stat-label">Years Learning</span>
+        </div>
+        <div class="hero__badge">
+          <span>✦</span> Open to work
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-label">scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About me</span>
+        <h2 class="section-title">Passionate about<br><em>digital craft</em></h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            Hi, I'm <strong>Carles Meca</strong>, a Web Developer &amp; Programmer
+            based in <strong>Barcelona, Spain</strong>. I'm passionate about web
+            development, UI/UX design, and building new projects that solve real
+            problems.
+          </p>
+          <p>
+            I focus on creating clean, performant front-end experiences with a strong
+            eye for design. I enjoy working with modern tools and frameworks, always
+            looking to improve and take on new challenges.
+          </p>
+          <a href="https://github.com/CPC2-2" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            View GitHub Profile →
+          </a>
+        </div>
+
+        <div class="about__cards">
+          <div class="about__card reveal">
+            <div class="about__card-icon" style="--icon-bg: rgba(232,184,75,0.12)">⚡</div>
+            <div>
+              <h3>Front-End Dev</h3>
+              <p>Building responsive, modern interfaces with HTML, CSS, JavaScript &amp; React.</p>
+            </div>
+          </div>
+          <div class="about__card reveal">
+            <div class="about__card-icon" style="--icon-bg: rgba(124,92,191,0.12)">🎨</div>
+            <div>
+              <h3>UI/UX Design</h3>
+              <p>Crafting intuitive and beautiful user experiences focused on usability.</p>
+            </div>
+          </div>
+          <div class="about__card reveal">
+            <div class="about__card-icon" style="--icon-bg: rgba(212,116,140,0.12)">🚀</div>
+            <div>
+              <h3>Always Learning</h3>
+              <p>Continuously exploring new technologies, frameworks, and best practices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Tech Stack</span>
+        <h2 class="section-title">Skills &amp;<br><em>Technologies</em></h2>
+      </div>
+
+      <div class="skills__grid">
+        <div class="skills__card reveal">
+          <div class="skills__card-header">
+            <span class="skills__dot skills__dot--gold"></span>
+            <h3>Front-End</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="skills__card reveal">
+          <div class="skills__card-header">
+            <span class="skills__dot skills__dot--purple"></span>
+            <h3>Back-End</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">Laravel</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Blade</span>
+          </div>
+        </div>
+
+        <div class="skills__card reveal">
+          <div class="skills__card-header">
+            <span class="skills__dot skills__dot--pink"></span>
+            <h3>Design &amp; Tools</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="skill-tag">UI/UX Design</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">GitHub Copilot</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Work</span>
+        <h2 class="section-title">Featured<br><em>Projects</em></h2>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- TaskManager -->
+        <article class="project-card reveal" data-color="#7C5CBF">
+          <div class="project-card__header">
+            <span class="project-card__num">01</span>
+            <span class="project-card__tech">Laravel · PHP</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">TaskManager</h3>
+            <p class="project-card__desc">
+              A web application built with Laravel for managing projects and their
+              associated tasks. Full CRUD with authentication.
+            </p>
+            <div class="project-card__tags">
+              <span>Laravel</span>
+              <span>Blade</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/CPC2-2/TaskManager" target="_blank" rel="noopener noreferrer" class="project-card__link">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <span class="project-card__star">⭐ 1</span>
+          </div>
+        </article>
+
+        <!-- WeatherApp -->
+        <article class="project-card reveal" data-color="#E8A020">
+          <div class="project-card__header">
+            <span class="project-card__num">02</span>
+            <span class="project-card__tech">JavaScript</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">WeatherApp</h3>
+            <p class="project-card__desc">
+              A small app to check the weather in different locations, built with
+              vanilla HTML, CSS, and JavaScript using a public weather API.
+            </p>
+            <div class="project-card__tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>REST API</span>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/CPC2-2/WeatherApp" target="_blank" rel="noopener noreferrer" class="project-card__link">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <span class="project-card__star">⭐ 1</span>
+          </div>
+        </article>
+
+        <!-- Tictactoe -->
+        <article class="project-card reveal" data-color="#D4748C">
+          <div class="project-card__header">
+            <span class="project-card__num">03</span>
+            <span class="project-card__tech">React</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Tic-Tac-Toe</h3>
+            <p class="project-card__desc">
+              A classic Tic-Tac-Toe game built with React, practising core concepts
+              like state management, components, and event handling.
+            </p>
+            <div class="project-card__tags">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>CSS</span>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/CPC2-2/Tictactoe" target="_blank" rel="noopener noreferrer" class="project-card__link">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- First React Project -->
+        <article class="project-card reveal" data-color="#5BA4CF">
+          <div class="project-card__header">
+            <span class="project-card__num">04</span>
+            <span class="project-card__tech">React</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">First React Project</h3>
+            <p class="project-card__desc">
+              My first React project — the classic HelloWorld stepping stone
+              into the React ecosystem, components, and JSX.
+            </p>
+            <div class="project-card__tags">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>JSX</span>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/CPC2-2/Myfirstreactproyect" target="_blank" rel="noopener noreferrer" class="project-card__link">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="projects__cta reveal">
+        <a href="https://github.com/CPC2-2" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+          See All Projects on GitHub →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="contact__blob contact__blob--1" aria-hidden="true"></div>
+    <div class="contact__blob contact__blob--2" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="contact__inner reveal">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's build<br><em>something great</em></h2>
+        <p class="contact__text">
+          Looking for a front-end developer or have a project in mind?<br>
+          Let's connect and create something amazing together.
+        </p>
+        <div class="contact__actions">
+          <a href="https://github.com/CPC2-2" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub Profile
+          </a>
+          <a href="mailto:carlesmeca@outlook.com" class="btn btn--ghost">
+            Get in Touch ✉
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">✦ CM</span>
+        <p class="footer__copy">© 2025 Carles Meca · Made with ♥ in Barcelona</p>
+        <div class="footer__links">
+          <a href="https://github.com/CPC2-2" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
